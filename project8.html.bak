@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="./assets/favicon.ico" rel="icon">
+
+  <title>Anthony Frezzato</title>  
+
+<link href="./main.d8e0d294.css" rel="stylesheet"></head>
+
+<body class="">
+
+<!-- Add your content of header -->
+<!--<div class="background-color-layer" style="background-image: url('assets/images/img-01.jpg')"-->
+<div class="background-color-layer" 
+></div>
+<main class="content-wrapper">
+  <header class="white-text-container section-container">
+    <div class="text-center">
+      <h1>Guitar practice schedule generator</h1>
+    </div>
+  </header>
+
+ <div class="container">
+   <div class="row">
+     <div class="col-xs-12">
+        <div class="card">
+          <div class="card-block">
+            <div class="row">
+              <div class="col-md-12">
+				<img src="./assets/images/guitar.png" class="img-responsive" alt="" width="1080" height="720">
+              </div>
+              <div class="col-md-8">
+			  <br>
+			  <b><small class="date">Description:</small></b>
+              <p>This project consists to create a guitar schedule practice generator. The idea is to optimize the time depending of skill priorities and time available per day.</p>
+			  <b><small class="date">Activities:</small></b>
+              <p>- Learn deep neural network with a machine learning algorithm.</p>
+			  <p>- Learn a physics-based character to get-up from floor using various styles.</p>
+			  <b><small class="date">Technologies:</small></b>
+              <p>- C++ and Python</p>
+			  <p>- Vortex Engine</p>
+			  <p>- Deep reinforcement learning (Use of PPO Algorithm)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+   </div>
+ </div>
+</main>
+
+<script type="text/javascript" src="./main.bc58148c.js"></script></body>
+
+</html>
