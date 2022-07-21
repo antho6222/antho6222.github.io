@@ -46,7 +46,7 @@
               <div class="col-md-8">
 			  <br>
 			  <b><small class="date">Description:</small></b>
-              <p>This project consist to create a third shooter.</p>
+              <p>This project consist to create a third person shooter.</p>
 			  <b><small class="date">Activities:</small></b>
               <p>- Create the game loop.</p>
               <p>- Map creation.</p>
