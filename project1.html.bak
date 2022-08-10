@@ -31,7 +31,6 @@
       <h1>Synthesizing Get-Up Motions for Physics-based Characters</h1>
     </div>
   </header>
-
  <div class="container">
    <div class="row">
      <div class="col-xs-12">
@@ -39,12 +38,17 @@
           <div class="card-block">
             <div class="row">
               <div class="col-md-12">
-				<img src="./assets/images/img-02.jpg" class="img-responsive" alt="" width="1080" height="720">
+				<iframe width="1024" height="700"
+					src="https://www.youtube.com//embed/w1TdiI0C46k">
+				</iframe>
               </div>
               <div class="col-md-8">
 			  <br>
 			  <b><small class="date">Description:</small></b>
-              <p>This project consists to learn a physics based character to get-up from the floor. The character is controlled by a deep neural network to perform the tasks. This work has been submitted to the notable conference on computer graphics SCA 2022.</p>
+              <p>This project consists to learn a physics based character to get-up from the floor. The character is controlled by a deep neural network to perform the tasks. This work has been published to the notable conference on computer graphics SCA 2022.</p>
+			  <p>Download the paper : <a class="fa-icon fa-icon-2x" href="./assets/CV_Anthony_Frezzato_US.pdf" title="" >
+				<img src="./assets/images/pdf-icon.PNG" class="img-responsive" alt="" width="32" height="32">
+			  </a></p>
 			  <b><small class="date">Activities:</small></b>
               <p>- Learn deep neural network with a machine learning algorithm.</p>
 			  <p>- Learn a physics-based character to get-up from floor using various styles.</p>
