@@ -71,7 +71,7 @@
             <div class="row">
               <div class="col-md-4">
 			  <!-- <a href="https://youtu.be/w1TdiI0C46k"> -->
-                <a href="project9.html"><img src="./assets/images/img-02.jpg" class="img-responsive" alt=""></a>
+                <a href="project9.html"><img src="./assets/images/img-09.jpg" class="img-responsive" alt=""></a>
                 <a href="project9.html"><h3 class="h5">[Tutorial]: UE 5.3 Learning Agents: Learn a sphere to roll using reinforcement learning using C++</h3></a>
                 <p>2023</p>
               </div>
