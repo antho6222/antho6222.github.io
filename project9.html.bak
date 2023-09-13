@@ -215,7 +215,6 @@
 			  <br>
 			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsInteractor.cpp">[Code to SphereLearningAgentsInteractor.cpp]</a></b>
               <div class="col-md-12">
-			  <br>
 				<img src="./assets/images/interactorobs.PNG" class="img-responsive" alt="" width="855" height="488">
 				<br>
               </div>
@@ -355,6 +354,12 @@
               <div class="col-md-12">
 				<img src="./assets/images/pythonfix.PNG" class="img-responsive" alt="" width="2552" height="1395">
 				<br>
+              </div>
+			  <p>Video of the training</p>
+			  <div class="col-md-12">
+				<iframe width="1024" height="700"
+					src="https://youtu.be/Vd8c05dEcpk">
+				</iframe>
               </div>
 			  <p>Contact me on by sending a message to : <b>https://www.linkedin.com/in/anthony-frezzato/<b> for any questions.</p>
             </div>
