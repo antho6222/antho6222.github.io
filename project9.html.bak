@@ -42,108 +42,135 @@
 			  <br>
 			  <b><big class="date">Description:</big></b>
               <p>This tutorial aims to get started with the Unreal 5.3 Learning framework using mainly c++.</p>
-			  <p>The C++ code can be found <a href="./tutorial_rlcode/">HERE</a>.</p>
+			  <p>The C++ code can be found <a href="https://github.com/antho6222/SimpleRLUE5_3">HERE</a>.</p>
 			  <b><big class="date">Author:</b> Anthony Frezzato.</big>
-			  <br>
+			  <br><br>
 			  <b><big class="date">What is reinforment learning:</big></b>
 			  <p>In reinforcement learning we want to train an agent to achieve a specific goal. A policy is trained using a reinforcement process.</p>
 			  <p>In our case, the policy is a neural network that provides the best actions for a given state. During the learning process the policy is trying different actions to discover the behavior we want to achieve.</p>
 			  <p>A reward function informs if the actions chosen is good or not. If yes, the neural network is updated to reinforce this action more frequently. The reward function is a simple scalar value.</p>
               <div class="col-md-12">
 				<img src="./assets/images/Rl.png" class="img-responsive" alt="" width="362" height="139">
+				<br>
               </div>
 			  <b><big class="date">Before to start:</big></b>
 			  <p>This tutorial is based on the Learning to Drive <a href="https://dev.epicgames.com/community/learning/tutorials/qj2O/unreal-engine-learning-to-drive">(link)</a> provided by Epic Games expect that the agent is a simple sphere simulated by physics.</p>
+			  <br>
 			  <b><big class="date">Create the project:</big></b>
 			  <p>First create a new blank c++ project with the name that you want.</p>
               <div class="col-md-12">
 				<img src="./assets/images/Createproject.PNG" class="img-responsive" alt="" width="1188" height="854">
+				<br>
               </div>
 			  <br>
 			  <br>
 			  <p>We need to enable the Learning Agents plugin. In the top navigation menu, click Edit then Plugins. Search for “Learning Agents” and select the checkbox near the plugin to enable it.</p>
               <div class="col-md-12">
 				<img src="./assets/images/Enableplugin.png" class="img-responsive" alt="" width="1600" height="280">
+				<br><br>
               </div>
 			  <b><big class="date">Create the pawn:</big></b>
 			  <p>We need to create the pawn that will represent the agent. Our pawn contains a sphere static mesh component with physics enabled.</p>
 			  <p>Create a new the new pawn using Tools -> new c++ class and select pawn.</p>
               <div class="col-md-12">
-				<img src="./assets/images/Createpawn.png" class="img-responsive" alt="" width="940" height="768">
+				<img src="./assets/images/Createpawn.PNG" class="img-responsive" alt="" width="940" height="768">
+				<br>
               </div>
 			  <p>Name it as SpherePawn</p>
               <div class="col-md-12">
 				<img src="./assets/images/Namepawn.PNG" class="img-responsive" alt="" width="938" height="557">
+				<br><br>
               </div>
 			  <p>Create a new folder named Blueprints inside the content folder.</p>
 			  <p>Create the blueprint based on our new c++ class as follow and save it inside Blueprints folder.</p>
               <div class="col-md-12">
 				<img src="./assets/images/Createpawnbp.PNG" class="img-responsive" alt="" width="854" height="454">
+				<br><br>
               </div>
 			  <p>The blueprint will open and add the sphere static mesh as follow.</p>
               <div class="col-md-12">
 				<img src="./assets/images/addsphere.PNG" class="img-responsive" alt="" width="628" height="581">
+				<br><br>
               </div>
 			  <p>In the details pane, enable Simulate Physics and enable mass with 5kg.</p>
 			  <p>Go to collision preset and change to custom and turn off collision with Pawn and Physics body in order to not collide with other spheres.</p>
               <div class="col-md-12">
 				<img src="./assets/images/Parampawn.PNG" class="img-responsive" alt="" width="621" height="1004">
+				<br><br>
               </div>
 			  <p>Add a spring arm and a camera attached to it. Adjust the camera a little bit as bellow.</p>
               <div class="col-md-12">
 				<img src="./assets/images/addpawncam.PNG" class="img-responsive" alt="" width="1695" height="737">
+				<br><br>
               </div>
 			  <p>Go to the Event Graph and add the blueprint code in order that the actor follow the static mesh:</p>
               <div class="col-md-12">
 				<img src="./assets/images/followcampawn.PNG" class="img-responsive" alt="" width="355" height="737">
+				<br>
               </div>
 			  <p>At this point, the blueprint pawn is done, compile and save it.</p>
 			  <p>We need to add actions that the policy will request to move the pawn (MoveX(...) and MoveY(...)).Also, we need to create the speed observation GetSphereVelocity().</p>
 			  <p>We need to implement a function to reset the position of the pawn.</p>
-			  <p>The SpherePawn.h header look like this:</p>
+			  <p>The SpherePawn.h header look like this.</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SpherePawn.h">[Code to SpherePawn.h]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/spherepawnh.PNG" class="img-responsive" alt="" width="871" height="751">
+				<br><br>
               </div>
 			  <p>Implement the BeginPlay() as follows, in this function we save a pointer to the StaticMeshComponent and also a pointer to the PlayerStart that will be lately used for the reset position.</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SpherePawn.cpp">[Code to SpherePawn.cpp]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/spherepawnbeginplay.PNG" class="img-responsive" alt="" width="756" height="410">
+				<br>
               </div>
 			  <p>In the Tick(float DeltaTime), we just update a member variable (ActualVelocity) of the current speed for debug purpose.</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SpherePawn.cpp">[Code to SpherePawn.cpp]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/spherepawntick.PNG" class="img-responsive" alt="" width="778" height="129">
+				<br>
               </div>
 			  <p>We add now the moveX and MoveY that apply a force to move the speed.</p>
 			  <p>GetSphereVelocity() is the current speed of the sphere that will be used as observation.</p>
 			  <p>ResetPosition() Move the component at the PlayerStart position and reset Linear and angular velocity.</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SpherePawn.cpp">[Code to SpherePawn.cpp]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/spherepawnactionsreset.PNG" class="img-responsive" alt="" width="736" height="568">
+				<br><br>
               </div>
+			  <br>
 			  <b><big class="date">Create Learning Agent Manager</big></b>
 			  <p>The manager is an actor around which the rest of Learning Agents is built. It acts both as a data structure which stores references to the various agents, as well as a place to specify the learning logic. Multiple agents are handled in a batch for efficient processing. Agents can be any UObject, which means you are unrestricted on what can be an agent. In this example, we will use the SpherePawn as our agent(s). The manager class is extended by a set of manager components which add to the manager’s functionality: the Interactor, Trainer, Recorder, to name a few. We will dive into these components later in this tutorial. (Mulcahy et Holden 2023).</p>
 			  <p>Before adding the manager, open YourProjectName.Builds.cs and add the Public Dependency Module to LearningAgents as follow.</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SimpleRL.Build.cs">[Code to SimpleRL.Build.cs]</a></b>
 	              <div class="col-md-12">
 				<img src="./assets/images/moduledep.PNG" class="img-responsive" alt="" width="1119" height="421">
+				<br>
               </div>
 			  <p>Add a C++ class, search for LearningAgentsManager inside All Classes tab.</p>
 			  <p>Name it as SphereLearningAgentsManager</p>
               <div class="col-md-12">
 				<img src="./assets/images/createlearningagentmanager.PNG" class="img-responsive" alt="" width="944" height="575">
+				<br>
               </div>
 			  <p>Because our Manager depends on the interactor and the trainer, create this two classes before implementing the manager.</p>
 			  <p>Add a C++ class, search for LearningAgentsInteractor inside All Classes tab.</p>
 			  <p>Name it as SphereLearningAgentsInteractor</p>
               <div class="col-md-12">
 				<img src="./assets/images/createinteractor.PNG" class="img-responsive" alt="" width="937" height="557">
+				<br>
               </div>
 			  <p>Add a C++ class, search for LearningAgentsTrainer inside All Classes tab.</p>
 			  <p>Name it as SphereLearningAgentsTrainer</p>
               <div class="col-md-12">
 				<img src="./assets/images/createtrainer.PNG" class="img-responsive" alt="" width="940" height="579">
+				<br>
               </div>
 			  <p>At this point we created all necessary c++ class for our project.</p>
 			  <p>Open now SphereLearningAgentsManager.h and the code should look like this:</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsManager.h">[Code to SphereLearningAgentsManager.h]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/managerheader.PNG" class="img-responsive" alt="" width="887" height="735">
+				<br>
               </div>
 			  <p>SphereLearningAgentsInteractor will store a pointer to  the Interactor that we will add later.</p>
 			  <p>LearningAgentsPolicy variables will store a pointer and parameters to the Policy that we will add later.</p>
@@ -151,40 +178,58 @@
 			  <p>Spheres is an array that stores pointers to our Pawn Actors.</p>
 			  <p>bTrainInProgress, bTrainDone is used for tracking the state of the trainning.</p>
 			  <p>The manager constructor search for the BpSpherePawn asset, this will be used to spawn many pawns.</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsManager.cpp">[Code to SphereLearningAgentsManager.cpp]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/managerconstructor.PNG" class="img-responsive" alt="" width="1039" height="274">
+				<br>
               </div>
 			  <p>The manager BeginPlay() will spawn 31 Pawns and will store array pointers to the SpherePawns.</p>
 			  <p>We iterate over attached components of the manager to save pointers to the Interactor, the trainer and the policy.</p>
 			  <p>Note that we did not create a c++ class for the policy since we do not need to implement specific logic into it.</p>
 			  <p>Finally, if we found ours components we can setup the interactor, the policy and the trainer.</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsManager.cpp">[Code to SphereLearningAgentsManager.cpp]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/managerbeginplay.PNG" class="img-responsive" alt="" width="1039" height="274">
+				<br>
               </div>
 			  <p>The manager Tick() will perfom a training step.</p>
 			  <p>We begin by training the policy and switch to the final trained policy after completion.</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsManager.cpp">[Code to SphereLearningAgentsManager.cpp]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/managertick.PNG" class="img-responsive" alt="" width="1232" height="832">
+				<br><br>
               </div>
+			  <br>
 			  <b><big class="date">Interactor</big></b>
 			  <p>The interactor component is responsible for defining how the manager’s agents interact with the world through observations and actions. All agents for a given manager share a common set of observations and actions. The interactor has four main functions we need to implement for our game: SetupObservations, SetObservations, SetupActions, and GetActions. (Mulcahy et Holden 2023)</p>
 			  <p>Open the SphereLearningAgentsInteractor.h</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsInteractor.h">[Code to SphereLearningAgentsInteractor.h]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/interactorheader.PNG" class="img-responsive" alt="" width="793" height="589">
+				<br>
               </div>
 			  <p>VelocityObservation is an object that will be used to describe the observation of the velocity.</p>
 			  <p>MoveXAction et MoveYAction are the two actions that make move the pawns by the policy.</p>
+			  <br>
 			  <b><big class="date">Interactor Observations</big></b>
+			  <br>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsInteractor.cpp">[Code to SphereLearningAgentsInteractor.cpp]</a></b>
               <div class="col-md-12">
+			  <br>
 				<img src="./assets/images/interactorobs.PNG" class="img-responsive" alt="" width="855" height="488">
+				<br>
               </div>
 			  <p>SetupObservations_Implementation() and SetObservations_Implementation are event called by the framework.</p>
 			  <p>SetupObservations_Implementation() tell the framework that we observe a velocity vector, since the target speed is 100, we scale it to 100 to normalize the value.</p>
 			  <p>SetObservations_Implementation update the speed observation by reading the speed of the sphere.</p>
 			  <p>SetupObservations is called once, and SetObservations at every time step.</p>
+			  <br>
 			  <b><big class="date">Interactor Actions</big></b>
+			  <br>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsInteractor.cpp">[Code to SphereLearningAgentsInteractor.cpp]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/interactoraction.PNG" class="img-responsive" alt="" width="795" height="445">
+				<br>
               </div>
 			  <p>SetupActions_Implementation() and GetActions_Implementation are event called by the framework.</p>
 			  <p>SetupActions_Implementation() tell the framework that we will be the action we will need from the policy.</p>
@@ -193,98 +238,125 @@
 			  <b><big class="date">Trainer</big></b>
 			  <p>The trainer is responsible for training the agents to perform the correct actions in the game, given the observations they are seeing. We need to implement two things: rewards and completions. (Mulcahy et Holden 2023)</p>
 			  <p>Open SphereLearningAgentsTrainer.h</p>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsTrainer.h">[Code to SphereLearningAgentsTrainer.h]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/trainerheader.PNG" class="img-responsive" alt="" width="853" height="380">
+				<br>
               </div>
 			  <p>ScalarVelocityReward will be used to represent the reward and ConditionalCompletion the completion (not used in the tutorial)</p>
 			  <b><big class="date">Trainer reward</big></b>
+			  <br>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsTrainer.cpp">[Code to SphereLearningAgentsTrainer.cpp]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/trainerreward.PNG" class="img-responsive" alt="" width="1001" height="531">
+				<br>
               </div>
 			  <p>SetupRewards_Implementation() is called by the framework in order to add all the rewards. Here we add just a single scalar reward value to monitor the speed. We scale to 100, because we aims to run at 100 unit/s. We normalize better the reward.</p>
 			  <p>SetRewards_Implementation is called at every time step to update the reward, we implement a simple reward that consist to run at -100 unit/s in X world direction.</p>
 			  <b><big class="date">Trainer completion</big></b>
+			  <br>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsTrainer.cpp">[Code to SphereLearningAgentsTrainer.cpp]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/trainercompletion.PNG" class="img-responsive" alt="" width="1073" height="289">
+				<br>
               </div>
 			  <p>SetupCompletions_Implementation() is called by the framework in order to add a completion. We add a conditional boolean completion, but we don't really need it for this tutorial.</p>
 			  <p>SetCompletions_Implementation is called a every time step to check if the episode should be completed, here we always send false because not really used in this tutorial.</p>
 			  <b><big class="date">Trainer reset episode</big></b>
+			  <br>
+			  <b><a href="https://github.com/antho6222/SimpleRLUE5_3/blob/main/SphereLearningAgentsTrainer.cpp">[Code to SphereLearningAgentsTrainer.cpp]</a></b>
               <div class="col-md-12">
 				<img src="./assets/images/trainerresetepisode.PNG" class="img-responsive" alt="" width="873" height="246">
+				<br>
               </div>
 			  <p>ResetEpisodes_Implementation is called by the framework to indicate that all agents must be reset. Here we iterate through all SpherePawn and reset their positions and speeds.</p>
 			  <b><big class="date">Create Manager Blueprint and Add components to manager</big></b>
 			  <p>We need now to create a blueprint based on the SphereLearningAgentsInteractor c++ class, SphereLearningAgentsTrainer c++ class and a simple blueprint for LearningAgentsPolicy.</p>
               <div class="col-md-12">
 				<img src="./assets/images/createbpfrominteractorcpp.PNG" class="img-responsive" alt="" width="528" height="314">
+				<br>
               </div>
 			  <p>Name it as BpSphereLearningAgentsInteractor, save and close it.</p>
               <div class="col-md-12">
 				<img src="./assets/images/createbpfrominteractorcppname.PNG" class="img-responsive" alt="" width="937" height="511">
+				<br>
               </div>
 			  <p>Do same for SphereLearningAgentsTrainer.</p>
               <div class="col-md-12">
 				<img src="./assets/images/createbpfromtrainercpp.PNG" class="img-responsive" alt="" width="526" height="314">
+				<br>
               </div>
 			  <p>Name it as BpSphereLearningAgentsTrainer, save and close it.</p>
               <div class="col-md-12">
 				<img src="./assets/images/createbpfromtrainercppame.PNG" class="img-responsive" alt="" width="940" height="522">
+				<br>
               </div>
 			  <p>Create a new Blueprint for the LearningAgentsPolicy.</p>
               <div class="col-md-12">
 				<img src="./assets/images/createbppolicy.PNG" class="img-responsive" alt="" width="615" height="554">
+				<br>
               </div>
 			  <p>Name it as BpLearningAgentsPolicy and save it.</p>
               <div class="col-md-12">
 				<img src="./assets/images/folderbp.PNG" class="img-responsive" alt="" width="659" height="295">
+				<br>
               </div>
 			  <p>Create the blueprint based on the LearningAgentsManager c++ class.</p>
               <div class="col-md-12">
 				<img src="./assets/images/createbpmanager.PNG" class="img-responsive" alt="" width="527" height="317">
+				<br>
               </div>
 			  <p>Name it as BpLearningAgentsManager and open it.</p>
               <div class="col-md-12">
 				<img src="./assets/images/createbpmanagername.PNG" class="img-responsive" alt="" width="939" height="524">
+				<br>
               </div>
 			  <p>Add components and filter by 'Bp' to find the tree blueprints that we need to add to the manager.</p>
               <div class="col-md-12">
 				<img src="./assets/images/addbps.PNG" class="img-responsive" alt="" width="834" height="574">
+				<br>
               </div>
 			  <p>We should obtain.</p>
               <div class="col-md-12">
 				<img src="./assets/images/addbpsdone.PNG" class="img-responsive" alt="" width="634" height="587">
+				<br>
               </div>
 			  <p>Change the tick interval to 0.01 inside the details pane and set the Max Agent Num to 32.</p>
 			  <p>Changing the tick will query the policy at a constant interval time.</p>
               <div class="col-md-12">
 				<img src="./assets/images/managerparams.PNG" class="img-responsive" alt="" width="636" height="587">
+				<br>
               </div>
 			  <b><big class="date">Configure the game mode</big></b>
 			  <p>Create a new game mode and configure as follow.</p>
               <div class="col-md-12">
 				<img src="./assets/images/newgamemode.PNG" class="img-responsive" alt="" width="1611" height="765">
+				<br>
               </div>
 			  <p>Change the default pawn class to the BpSpherePawn.</p>
               <div class="col-md-12">
 				<img src="./assets/images/changedefaultpawn.PNG" class="img-responsive" alt="" width="808" height="188">
+				<br>
               </div>
 			  <p>Drag the BpSphereLearningAgentsManager to the scene.</p>
               <div class="col-md-12">
 				<img src="./assets/images/dragmanager.PNG" class="img-responsive" alt="" width="2536" height="834">
+				<br>
               </div>
 			  <b><big class="date">Train</big></b>
 			  <p>At this point if you hit play. The training will start.</p>
 			  <p>When 2000 iterations completed (about 5 minutes), the training is over and we trained policy is just played all the time.</p>
               <div class="col-md-12">
 				<img src="./assets/images/trainprogress.PNG" class="img-responsive" alt="" width="2552" height="1395">
+				<br>
               </div>
 			  <p>Note: if you have a python error when training is completed you can try this fix.</p>
 			  <p>Rename send_complete_multiprocess to shared_memory_send_complete_multiprocess for the send_complete function inside train_common.py (the path varies depending where you installed UE5.3)<p>
               <div class="col-md-12">
 				<img src="./assets/images/pythonfix.PNG" class="img-responsive" alt="" width="2552" height="1395">
+				<br>
               </div>
-			  <p>Contact me on by sending a message to : https://www.linkedin.com/in/anthony-frezzato/ for any questions.<p>
+			  <p>Contact me on by sending a message to : <b>https://www.linkedin.com/in/anthony-frezzato/<b> for any questions.</p>
             </div>
           </div>
         </div>
