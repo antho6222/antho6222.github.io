@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="[Tutorial]: UE 5.3 Learning Agents: Learn a sphere to roll using reinforcement learning using C++">
+  <meta content="description" name="[Tutorial]: Unreal Engine 5.3 Learning Agents: Learn a sphere to roll using reinforcement learning using C++">
   <meta name="google" content="notranslate" />
-  <meta content="[Tutorial]: UE 5.3 Learning Agents: Learn a sphere to roll using reinforcement learning using C++" name="author">
+  <meta content="[Tutorial]: Unreal Engine 5.3 Learning Agents: Learn a sphere to roll using reinforcement learning using C++" name="author">
 
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
   <link href="./assets/favicon.ico" rel="icon">
 
-  <title>[Tutorial]: UE 5.3 Learning Agents: Learn a sphere to roll using reinforcement learning using C++</title>  
+  <title>[Tutorial]: Unreal Engine 5.3 Learning Agents: Learn a sphere to roll using reinforcement learning using C++</title>  
 
 <link href="./main.d8e0d294.css" rel="stylesheet"></head>
 
@@ -28,7 +28,7 @@
 <main class="content-wrapper">
   <header class="white-text-container section-container">
     <div class="text-center">
-      <h1>[Tutorial]: UE 5.3 Learning Agents: Learn a sphere to roll using reinforcement learning using C++</h1>
+      <h1>[Tutorial]: Unreal Engine 5.3 Learning Agents: Learn a sphere to roll using reinforcement learning using C++</h1>
     </div>
   </header>
 
@@ -54,7 +54,7 @@
 				<br>
               </div>
 			  <b><big class="date">Before to start:</big></b>
-			  <p>This tutorial is based on the Learning to Drive <a href="https://dev.epicgames.com/community/learning/tutorials/qj2O/unreal-engine-learning-to-drive">(link)</a> provided by Epic Games expect that the agent is a simple sphere simulated by physics.</p>
+			  <p>This tutorial is based on the Learning to Drive <a href="https://dev.epicgames.com/community/learning/tutorials/qj2O/unreal-engine-learning-to-drive">(link)</a> provided by Epic Games except that the agent is a simple sphere simulated by physics.</p>
 			  <br>
 			  <b><big class="date">Create the project:</big></b>
 			  <p>First create a new blank c++ project with the name that you want.</p>
@@ -361,7 +361,7 @@
 					src="https://www.youtube.com//embed/Vd8c05dEcpk">
 				</iframe>
               </div>
-			  <p>Contact me on by sending a message to : <b>https://www.linkedin.com/in/anthony-frezzato/<b> for any questions.</p>
+			  <p>Contact me on: <a href="https://www.linkedin.com/in/anthony-frezzato/"><b>https://www.linkedin.com/in/anthony-frezzato/<b></a></p>
             </div>
           </div>
         </div>
