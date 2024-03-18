@@ -113,6 +113,56 @@
 		
         <div class="card">
           <div class="card-block">
+            <h2>Education</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="education-experience">
+                  <small class="date">Since 2021</small>
+                  <h3 class="h5 date-title">Master Information Technology (IT) engineering (M. Sc. A) </h3>
+                  <p>École de technologie supérieure (ÉTS), Université du Québec, Montréal</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="education-experience">
+                  <small class="date">2021</small>
+                  <h3 class="h5 date-title">Bachelor of Software Engineering</h3>
+                  <p>École de technologie supérieure (ÉTS), Université du Québec, Montréal</p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="education-experience">
+                  <small class="date">2007</small>
+                  <h3 class="h5 date-title">Technological University degree Electrical Engineering</h3>
+                  <p>Institut universitaire de technologie, Béthune, France</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+        <div class="card">
+          <div class="card-block">
+            <h2>Skills</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="education-experience">
+                  <h3 class="h5 date-title">Programming Languages</h3>
+                  <p>C++, Python, C#, Java</p>
+				  <p>Javascript, LUA, HLSL, GLSL</p>
+                </div>
+				</div>
+                <div class="education-experience">
+                  <h3 class="h5 date-title">Softwares</h3>
+                  <p>Visual Studio, Unreal Engine, Unity 3D</p>
+				  <p>Vortex, Blender, IntelliJ IDEA</p>
+				  <p>Eclipse, Git, Matlab.</p>
+                </div>
+				</div>
+              </div>
+        </div>
+		
+        <div class="card">
+          <div class="card-block">
             <h2>Projects & Publications</h2>
             <div class="row">
               <div class="col-md-4">
@@ -182,35 +232,7 @@
           </div>
         </div>-->
        
-        <div class="card">
-          <div class="card-block">
-            <h2>Education</h2>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="education-experience">
-                  <small class="date">Since 2021</small>
-                  <h3 class="h5 date-title">Master Information Technology (IT) engineering (M. Sc. A) </h3>
-                  <p>École de technologie supérieure (ÉTS), Université du Québec, Montréal</p>
-                </div>
-                
-              </div>
-              <div class="col-md-4">
-                <div class="education-experience">
-                  <small class="date">2021</small>
-                  <h3 class="h5 date-title">Bachelor of Software Engineering</h3>
-                  <p>École de technologie supérieure (ÉTS), Université du Québec, Montréal</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="education-experience">
-                  <small class="date">2007</small>
-                  <h3 class="h5 date-title">Technological University degree Electrical Engineering</h3>
-                  <p>Institut universitaire de technologie, Béthune, France</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
         
         <div class="card">
           <div class="card-block">
