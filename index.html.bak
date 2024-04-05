@@ -29,10 +29,10 @@
   <header class="white-text-container section-container">
     <div class="text-center">
       <h1>Anthony Frezzato</h1>
-	  <a href="mailto:antho62@msn.com"><p>antho62@msn.com</p></a>
+	  <!--<a href="mailto:antho62@msn.com"><p>antho62@msn.com</p></a>-->
       <p>Software Engineer</p>
       <p>
-        <a class="fa-icon fa-icon-2x" href="https://www.linkedin.com/in/anthony-frezzato/" title="">
+        <!--<a class="fa-icon fa-icon-2x" href="https://www.linkedin.com/in/anthony-frezzato/" title="">-->
           <i class="fa fa-linkedin"></i>
         </a>
 		<br>
@@ -148,7 +148,8 @@
                 <div class="education-experience">
                   <h3 class="h5 date-title">Programming Languages</h3>
                   <p>C++, Python, C#, Java</p>
-				  <p>Javascript, LUA, HLSL, GLSL</p>
+				  <p>Javascript, LUA</p>
+				  <p>HLSL, GLSL</p>
                 </div>
 				</div>
                 <div class="education-experience">
