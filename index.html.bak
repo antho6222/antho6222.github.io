@@ -65,7 +65,49 @@
           </div>
         </div>
 
-
+        <div class="card">
+          <div class="card-block">
+            <h2>Skills</h2>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="education-experience">
+                  <h3 class="h5 date-title">Programming Languages</h3>
+                  <p>C++, Python, C#, Java</p>
+				  <p>Javascript, LUA</p>
+				  <p>HLSL, GLSL</p>
+                </div>
+				</div>
+				<div class="col-md-4">
+                <div class="education-experience">
+                  <h3 class="h5 date-title">Softwares</h3>
+                  <p>Visual Studio, Unity 3D</p>
+				  <p>Vortex, Blender, IntelliJ IDEA</p>
+				  <p>Eclipse, Git, Matlab.</p>
+                </div>
+				</div>
+				<div class="col-md-4">
+                <div class="education-experience">
+                  <h3 class="h5 date-title">Machine Learning</h3>
+                  <p>PPO Algorithm, Variational autoencoder (VAE).</p>
+                </div>
+				</div>
+				</div>
+				<div class="row">
+				<div class="col-md-4">
+                <div class="education-experience">
+                  <h3 class="h5 date-title">Rendering API</h3>
+                  <p>OpenGL, DirectX.</p>
+                </div>
+				</div>
+				<div class="col-md-4">
+                <div class="education-experience">
+                  <h3 class="h5 date-title"> Unreal Engine</h3>
+                  <p>Particle System, Map creation, Lighting, Animation System, Physics, Collisions, AI, Decals, Textures.</p>
+                </div>
+				</div>
+				</div>
+              </div>
+        </div>
 
         <div class="card">
           <div class="card-block">
@@ -141,43 +183,7 @@
             </div>
           </div>
         </div>
-		
-        <div class="card">
-          <div class="card-block">
-            <h2>Skills</h2>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="education-experience">
-                  <h3 class="h5 date-title">Programming Languages</h3>
-                  <p>C++, Python, C#, Java</p>
-				  <p>Javascript, LUA</p>
-				  <p>HLSL, GLSL</p>
-                </div>
-				</div>
-				<div class="col-md-4">
-                <div class="education-experience">
-                  <h3 class="h5 date-title">Softwares</h3>
-                  <p>Visual Studio, Unreal Engine, Unity 3D</p>
-				  <p>Vortex, Blender, IntelliJ IDEA</p>
-				  <p>Eclipse, Git, Matlab.</p>
-                </div>
-				</div>
-				<div class="col-md-4">
-                <div class="education-experience">
-                  <h3 class="h5 date-title">Machine Learning</h3>
-                  <p>PPO Algorithm, Variational autoencoder (VAE).</p>
-                </div>
-				</div>
-				<div class="col-md-4">
-                <div class="education-experience">
-                  <h3 class="h5 date-title">Rendering API</h3>
-                  <p>OpenGL, DirectX.</p>
-                </div>
-				</div>
-				</div>
-              </div>
-        </div>
-		
+	
         <div class="card">
           <div class="card-block">
             <h2>Projects & Publications</h2>
